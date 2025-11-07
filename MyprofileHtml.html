@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aashutosh Dangi — Profile</title>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#06b6d4;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, #071226 0%, #081426 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:28px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:24px;
+    }
+
+    /* responsive */
+    @media (max-width:900px){
+      .container{ grid-template-columns: 1fr; padding:0 12px;}
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    header.profile{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      margin-bottom:14px;
+    }
+
+    .avatar{
+      width:96px;
+      height:96px;
+      border-radius:18px;
+      background:linear-gradient(135deg,var(--accent), #7c3aed);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:32px;
+      color:#021025;
+      flex-shrink:0;
+    }
+
+    .title h1{ margin:0; font-size:20px;}
+    .title p{ margin:4px 0 0; color:var(--muted); font-size:14px;}
+
+    .intro{
+      margin-top:10px;
+      padding:14px;
+      background:var(--glass);
+      border-radius:12px;
+      color: #eaf6fb;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin-top:14px;
+    }
+    @media (max-width:600px){
+      .grid-2{ grid-template-columns:1fr;}
+    }
+
+    h3.section{ margin:0 0 10px 0; font-size:16px; color:#e6f7fb;}
+    ul.skills{ list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:8px;}
+    ul.skills li{
+      background:rgba(255,255,255,0.03);
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+
+    .projects .project{
+      margin-bottom:12px;
+      padding:10px;
+      border-radius:10px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .project h4{ margin:0 0 6px 0; font-size:14px;}
+    .project p{ margin:0; color:var(--muted); font-size:13px;}
+
+    .side .contact-row{
+      display:flex;
+      justify-content:space-between;
+      gap:8px;
+      align-items:center;
+      margin-bottom:10px;
+    }
+    .contact{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:12px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      background:linear-gradient(90deg,var(--accent), #7c3aed);
+      color:#021025;
+    }
+    .muted{ color:var(--muted); font-size:13px;}
+    footer{ text-align:center; margin-top:18px; color:var(--muted); font-size:13px;}
+
+    /* small badges row */
+    .badges{ display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;}
+    .badge{ padding:6px 10px; border-radius:999px; background:rgba(255,255,255,0.02); font-size:13px; color:var(--muted); border:1px solid rgba(255,255,255,0.02);}
+
+    /* resume button full width on mobile */
+    .resume-wrap{ margin-top:12px; display:flex; gap:8px; }
+    @media (max-width:600px){ .resume-wrap{ flex-direction:column; } .btn{ width:100%; text-align:center; } }
+
+    /* small link row */
+    .links{ margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;}
+    .link{ font-size:13px; color:var(--muted); text-decoration:none; padding:6px 8px; border-radius:8px; border:1px solid rgba(255,255,255,0.02); background:rgba(255,255,255,0.01);}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <!-- LEFT / MAIN -->
+    <section class="card">
+      <header class="profile">
+        <div class="avatar">AD</div>
+        <div class="title">
+          <h1>Aashutosh Dangi</h1>
+          <p>.NET Full Stack Developer • ASP.NET Core • Angular • SQL</p>
+          <div class="badges">
+            <span class="badge">Open to Work</span>
+            <span class="badge">C# • ASP.NET</span>
+            <span class="badge">Angular</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="intro">
+        <p><strong>About me</strong> — I am a focused .NET Full Stack developer building real-world web applications with ASP.NET Core, Angular and SQL Server. Previously worked in loan & collections roles; transitioning to software development with strong appetite for learning and practical projects.</p>
+      </div>
+
+      <div class="grid-2">
+        <div>
+          <h3 class="section">Tech Stack</h3>
+          <ul class="skills">
+            <li>C#</li><li>ASP.NET Core</li><li>ASP.NET Web Forms</li><li>Angular</li><li>HTML</li><li>CSS</li><li>SQL Server</li><li>Azure (Basics)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="section">Tools & Workflow</h3>
+          <ul class="skills">
+            <li>Visual Studio</li><li>VS Code</li><li>Git & GitHub</li><li>Postman</li><li>ADO.NET</li><li>EF Core</li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="projects" style="margin-top:18px;">
+        <h3 class="section">Featured Projects</h3>
+
+        <div class="project">
+          <h4>Student Registration System</h4>
+          <p>ASP.NET Core MVC + SQL Server — CRUD, validation, file upload, layered architecture. (Link & description placeholder)</p>
+        </div>
+
+        <div class="project">
+          <h4>Property Survey System</h4>
+          <p>ASP.NET Web Forms — Multi-step wizard, webcam image capture, SQL Server integration. (Link placeholder)</p>
+        </div>
+
+        <div class="project">
+          <h4>Angular Dashboard + Web API</h4>
+          <p>Angular frontend + Web API backend, JWT-based auth, routing and role-based views. (Link placeholder)</p>
+        </div>
+      </section>
+
+      <div style="margin-top:18px;">
+        <h3 class="section">Quick Links</h3>
+        <div class="links">
+          <a class="link" href="#" onclick="alert('Replace with your LinkedIn URL')">LinkedIn</a>
+          <a class="link" href="#" onclick="alert('Replace with your resume link')">Resume (PDF)</a>
+          <a class="link" href="#" onclick="alert('Replace with GitHub repo link')">Top Project Repo</a>
+        </div>
+
+        <div class="resume-wrap">
+          <a class="btn" href="#" onclick="alert('Upload resume and replace this link')">Download Resume</a>
+          <a class="link" href="#" onclick="navigator.clipboard.writeText(window.location.href).then(()=>alert('Profile URL copied'));">Copy Profile URL</a>
+        </div>
+      </div>
+
+      <footer>
+        Built with ❤️ • Ready to collaborate — hire me for internships / junior roles.
+      </footer>
+    </section>
+
+    <!-- RIGHT / SIDEBAR -->
+    <aside class="card side">
+      <div class="contact">
+        <h3 class="section">Contact</h3>
+        <div class="contact-row"><div class="muted">Phone</div><div class="muted">Will provide later</div></div>
+        <div class="contact-row"><div class="muted">Email</div><div class="muted">your-email@example.com</div></div>
+        <div class="contact-row"><div class="muted">Location</div><div class="muted">India</div></div>
+
+        <div style="margin-top:12px;">
+          <a class="btn" href="#" onclick="alert('Replace with mailto: or link')">Contact Me</a>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;">
+        <h3 class="section">Availability</h3>
+        <p class="muted">Open to internships, junior developer roles and freelance projects. Available to interview on weekends & weekdays (flexible).</p>
+      </div>
+
+      <div style="margin-top:14px;">
+        <h3 class="section">Education</h3>
+        <p class="muted">(Add your latest degree / certifications here)</p>
+      </div>
+
+      <div style="margin-top:14px;">
+        <h3 class="section">Languages</h3>
+        <ul class="skills" style="gap:6px">
+          <li>English</li><li>हिंदी</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    // small helper: replace placeholders easily (edit values below)
+    (function(){
+      const meta = {
+        name: "Aashutosh Dangi",
+        phone: "Will provide later",
+        email: "your-email@example.com",
+        linkedin: "#",
+        resume: "#"
+      };
+
+      document.querySelector('h1').textContent = meta.name;
+      // update contact fields
+      document.querySelectorAll('.contact-row')[0].children[1].textContent = meta.phone;
+      document.querySelectorAll('.contact-row')[1].children[1].textContent = meta.email;
+      // update quick links (first three)
+      const links = document.querySelectorAll('.links a');
+      if(links[0]) links[0].href = meta.linkedin;
+      if(links[1]) links[1].href = meta.resume;
+    })();
+  </script>
+</body>
+</html>
